@@ -19,13 +19,20 @@
 //   }
 // }
 
+// function palindrome(str) {
+//   const reversed = str.split('').reverse().join('');
+//   // if (reversed === str) {
+//   //   return true;
+//   // }
+//   // return false;
+//   return str === reversed;
+// }
+
+//doesnt actually reverse
 function palindrome(str) {
-  const reversed = str.split('').reverse().join('');
-  // if (reversed === str) {
-  //   return true;
-  // }
-  // return false;
-  return str === reversed;
+  return str.split('').every((el, i) => {
+    return el === str[str.length - i - 1];
+  });
 }
 
 module.exports = palindrome;
