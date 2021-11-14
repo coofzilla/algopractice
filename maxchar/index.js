@@ -11,6 +11,7 @@ function maxChar(str) {
   let maxChar = '';
 
   for (let char of str) {
+    console.log(char);
     if (!charsObj[char]) {
       charsObj[char] = 1;
     }
@@ -29,5 +30,3 @@ function maxChar(str) {
 }
 
 module.exports = maxChar;
-
-
