@@ -41,13 +41,13 @@ function steps(n, row = 0, stair = '') {
     console.log(stair);
     return steps(n, row + 1);
   }
-
+  //stair gets assigned
   if (stair.length <= row) {
     stair += '#';
   } else {
     stair += ' ';
   }
-
+  //and that assigned value passed here for next iteration
   steps(n, row, stair);
 }
 
