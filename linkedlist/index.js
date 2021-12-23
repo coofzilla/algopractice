@@ -98,6 +98,16 @@ class LinkedList {
     let newNode = new Node(data, before.next);
     before.next = newNode;
   }
+
+  forEach(fn) {
+    let node = this.head;
+    let counter = 0;
+    while (node) {
+      fn(node);
+      node = node.next;
+      counter++;
+    }
+  }
 }
 
 module.exports = { Node, LinkedList };
