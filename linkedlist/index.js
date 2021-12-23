@@ -92,7 +92,12 @@ class LinkedList {
     // let after = this.getAt(index + 1);
   }
 
-  
+  insertAt(data, index) {
+    if (index <= 0) return this.insertFirst(data);
+    let before = this.getAt(index - 1) || this.getLast();
+    let newNode = new Node(data, before.next);
+    before.next = newNode;
+  }
 }
 
 module.exports = { Node, LinkedList };
