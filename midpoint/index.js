@@ -15,13 +15,19 @@
 function midpoint(list) {
   let slow = list.head;
   let fast = list.head;
+
   while (list.head) {
     if (!fast.next?.next) return slow;
 
     slow = slow.next;
     fast = fast.next.next;
   }
-  return slow;
+  //without option chaining
+  // while (fast.next && fast.next.next) {
+  //   slow = slow.next;
+  //   fast = fast.next.next;
+  // }
+  // return slow;
 }
 
 module.exports = midpoint;
